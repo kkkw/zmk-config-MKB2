@@ -35,8 +35,8 @@ layers:
   - M
   - COMMA
   - DOT
-  - UP
   - {t: FSLH, h: RALT}
+  - ENTER
   - LCTRL
   - LALT
   - LGUI
@@ -44,9 +44,9 @@ layers:
   - {t: SPACE, h: Fnc}
   - {t: SPACE, h: Fnc}
   - {t: RIGHT GUI, h: Num}
-  - LEFT
-  - DOWN
-  - RIGHT
+  - '&mkp MB1'
+  - '&mkp MB3'
+  - '&mkp MB2'
   - LEFT
   - UP
   - ENTER
@@ -94,7 +94,7 @@ layers:
   - F12
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -103,9 +103,9 @@ layers:
   - {t: ENTER, type: held}
   - ENTER
   - ENTER
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LEFT
+  - DOWN
+  - RIGHT ARROW
   - LEFT
   - UP
   - SPACE
