@@ -40,10 +40,10 @@ layers:
   - LCTRL
   - LALT
   - LGUI
-  - {t: LEFT GUI, h: Num}
+  - {t: LANG2, h: Num}
   - {t: SPACE, h: Fnc}
   - {t: SPACE, h: Fnc}
-  - {t: RIGHT GUI, h: Num}
+  - {t: LANG1, h: Num}
   - '&mkp MB1'
   - '&mkp MB3'
   - '&mkp MB2'
