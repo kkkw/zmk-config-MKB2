@@ -30,6 +30,15 @@
         };
     };
 
+    behaviors {
+        kkkw_msc: kkkw_msc {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "KKKW_MSC";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -45,7 +54,7 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp UP DOWN>,
+                <&kkkw_msc>,
                 <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
