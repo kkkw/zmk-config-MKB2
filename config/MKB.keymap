@@ -21,18 +21,27 @@
 };
 
 / {
+    macros {
+        raycast: raycast {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT &kp LEFT_SHIFT>;
+            label = "RAYCAST";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             label = "Def";
             bindings = <
-&kp ESC     &kp Q     &kp W      &kp E     &kp R          &kp T               &kp Y           &kp U          &kp I      &kp O      &kp P          &kp BKSP
-&lt BT TAB  &kp A     &kp S      &kp D     &kp F          &kp G               &kp H           &kp J          &kp K      &kp L      &kp SEMI       &lt MOUSE SQT
-&kp LSHFT   &kp Z     &kp X      &kp C     &kp V          &kp B               &kp N           &kp M          &kp COMMA  &kp DOT    &mt RALT FSLH  &kp ENTER
-&kp LCTRL   &kp LALT  &kp LGUI             &lt NUM LANG2  &lt FUNC SPACE      &lt FUNC SPACE  &lt NUM LANG1             &mkp MB1   &mkp MB3       &mkp MB2
-&kp LEFT    &kp UP    &kp ENTER  &kp DOWN  &kp RIGHT                                          &kp HOME       &kp PG_UP  &kp ENTER  &kp PG_DN      &kp END
-                                 &kp A                                                                       &kp B
+&kp ESC    &kp Q     &kp W      &kp E     &kp R        &kp T            &kp Y        &kp U                &kp I      &kp O      &kp P           &kp BKSP
+&lt 5 TAB  &kp A     &kp S      &kp D     &kp F        &kp G            &kp H        &kp J                &kp K      &kp L      &kp COLON       &kp ENTER
+&kp LSHFT  &kp Z     &kp X      &kp C     &kp V        &kp B            &kp N        &kp M                &kp COMMA  &kp DOT    &mt RALT QMARK  &mt RIGHT_SHIFT MINUS
+&kp LCTRL  &kp LALT  &kp LGUI             &lt 3 LANG2  &lt 1 SPACE      &lt 2 SPACE  &mt RIGHT_GUI LANG1             &mkp MB1   &mkp MB2        &mkp MB3
+&kp LEFT   &kp UP    &kp ENTER  &kp DOWN  &kp RIGHT                                  &kp HOME             &kp PG_UP  &kp ENTER  &kp PG_DN       &kp END
+                                &kp A                                                                     &kp B
             >;
 
             sensor-bindings =
@@ -40,15 +49,15 @@
                 <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        function_layer {
-            label = "Fnc";
+        symbol_layer {
+            label = "Sym";
             bindings = <
-&kp GRAVE  &kp PG_UP  &kp UP     &kp PG_DN  &kp HOME   &trans         &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &trans
-&tog_ls    &kp LEFT   &kp DOWN   &kp RIGHT  &kp END    &trans         &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &trans
-&trans     &kp BKSP   &kp DEL    &trans     &trans     &trans         &kp F11    &kp F12    &trans     &trans     &kp UP     &trans
-&trans     &trans     &kp LALT              &kp ENTER  &kp ENTER      &kp ENTER  &kp ENTER             &kp LEFT   &kp DOWN   &kp RIGHT_ARROW
-&kp LEFT   &kp UP     &kp SPACE  &kp DOWN   &kp RIGHT                            &kp HOME   &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
-                                 &kp A                                                      &kp B
+&trans                 &kp AMPERSAND    &kp ASTRK    &kp LEFT_PARENTHESIS  &trans     &trans        &trans  &kp GRAVE  &kp TILDE  &kp LEFT_BRACKET   &kp LEFT_BRACE     &trans
+&trans                 &kp DLLR         &kp PERCENT  &kp CARET             &kp BSLH   &kp PIPE      &trans  &kp SEMI   &kp COLON  &kp RIGHT_BRACKET  &kp RIGHT_BRACE    &trans
+&kp RIGHT_PARENTHESIS  &kp EXCLAMATION  &kp AT       &kp HASH              &kp SLASH  &trans        &trans  &kp EQUAL  &kp PLUS   &kp SINGLE_QUOTE   &kp DOUBLE_QUOTES  &kp UNDER
+&trans                 &trans           &trans                             &trans     &trans        &trans  &trans                &trans             &trans             &trans
+&kp LEFT               &kp UP           &kp SPACE    &kp DOWN              &kp RIGHT                        &kp HOME   &kp PG_UP  &kp ENTER          &kp PG_DN          &kp END
+                                                     &kp A                                                             &kp B
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -57,12 +66,26 @@
         num_layer {
             label = "Num";
             bindings = <
-&kp CAPS         &kp N1         &kp N2     &kp N3    &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &trans
-&trans           &trans         &trans     &trans    &trans     &trans         &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH   &trans
-&mt LSHFT SPACE  &kp BACKSPACE  &kp DEL    &trans    &trans     &trans         &trans     &kp FSLH   &kp SEMI   &kp SQT    &trans     &trans
-&trans           &kp ENTER      &kp ENTER            &kp ENTER  &kp ENTER      &kp ENTER  &kp ENTER             &trans     &trans     &trans
-&kp LEFT         &kp UP         &kp SPACE  &kp DOWN  &kp RIGHT                            &kp HOME   &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
-                                           &kp A                                                     &kp B
+&trans    &kp N7        &kp N8        &kp N9        &trans     &trans      &trans  &trans    &kp UP_ARROW  &trans     &trans     &trans
+&trans    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans     &trans      &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans     &trans
+&kp N0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &trans      &trans  &trans    &trans        &trans     &trans     &trans
+&trans    &trans        &trans                      &trans     &trans      &trans  &trans                  &trans     &trans     &trans
+&kp LEFT  &kp UP        &kp SPACE     &kp DOWN      &kp RIGHT                      &kp HOME  &kp PG_UP     &kp ENTER  &kp PG_DN  &kp END
+                                      &kp A                                                  &kp B
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        function_layer {
+            label = "Fnc";
+            bindings = <
+&trans    &kp F7  &kp F8     &kp F9    &raycast       &trans      &trans  &trans    &trans     &trans     &trans     &trans
+&trans    &kp F4  &kp F5     &kp F6    &kp LS(LG(V))  &trans      &trans  &trans    &trans     &trans     &trans     &trans
+&kp F10   &kp F1  &kp F2     &kp F3    &caps_word     &trans      &trans  &trans    &trans     &trans     &trans     &trans
+&trans    &trans  &trans               &trans         &trans      &trans  &trans               &trans     &trans     &trans
+&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                          &kp HOME  &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
+                             &kp A                                                  &kp B
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -70,20 +93,6 @@
 
         mouse_layer {
             label = "Mouse";
-            bindings = <
-&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &trans     &trans     &trans     &trans
-&trans    &trans  &trans     &trans    &trans     &trans      &trans  &mkp MB1  &mkp MB3   &mkp MB2   &trans     &trans
-&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &trans     &trans     &trans     &trans
-&trans    &trans  &trans               &trans     &trans      &trans  &trans               &trans     &trans     &trans
-&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                      &kp HOME  &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
-                             &kp A                                              &kp B
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-        };
-
-        scroll_layer {
-            label = "Scr";
             bindings = <
 &trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &trans     &trans     &trans     &trans
 &trans    &trans  &trans     &trans    &trans     &trans      &trans  &mkp MB1  &mkp MB3   &mkp MB2   &trans     &trans
