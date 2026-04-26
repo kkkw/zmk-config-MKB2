@@ -1,5 +1,8 @@
 // #include <layout_shift.dtsi>
 
+/* マウススクロールの感度（&msc の既定より強め。不要なら 10 やコメント化） */
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+
 #include <layout_shift_kp_override.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -31,10 +34,12 @@
     };
 
     behaviors {
+        /* エンコーダ+&msc は既定 tap-ms(5) が短くホストが捨てることがある。Issue 系では 30〜100 が有効 */
         kkkw_msc: kkkw_msc {
             compatible = "zmk,behavior-sensor-rotate";
             label = "KKKW_MSC";
             #sensor-binding-cells = <0>;
+            tap-ms = <50>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
     };
