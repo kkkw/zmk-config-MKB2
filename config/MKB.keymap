@@ -12,7 +12,7 @@
 #define MOUSE 3
 #define SCROLL 4
 #define BT 5
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
 / {
     macros {
@@ -31,7 +31,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
-            tap-ms = <50>;
+            tap-ms = <20>;
         };
     };
 
