@@ -12,7 +12,7 @@
 #define MOUSE 3
 #define SCROLL 4
 #define BT 5
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 60
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 70
 
 / {
     macros {
