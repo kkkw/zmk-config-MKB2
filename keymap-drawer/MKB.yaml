@@ -178,12 +178,12 @@ layers:
   - A
   - B
   Fnc:
-  - {t: ▽, type: trans}
+  - {t: Mouse, h: toggle}
   - F7
   - F8
   - F9
-  - '&raycast'
-  - {t: ▽, type: trans}
+  - Gui+SPACE
+  - Gui+Sft+4
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -229,14 +229,23 @@ layers:
   - SPACE
   - DOWN
   - RIGHT
-  - HOME
-  - PG UP
+  - Gui+LEFT BRACKET
+  - Gui+R
   - ENTER
-  - PG DN
-  - END
+  - Gui+W
+  - Gui+RIGHT BRACKET
   - A
   - B
   Mouse:
+  - {t: Def, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -246,6 +255,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - Ctl+D
+  - LEFT
+  - DOWN
+  - RIGHT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -254,20 +267,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&mkp MB1'
-  - '&mkp MB3'
-  - '&mkp MB2'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Ctl+C
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -288,11 +288,11 @@ layers:
   - SPACE
   - DOWN
   - RIGHT
-  - HOME
-  - PG UP
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ENTER
-  - PG DN
-  - END
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - A
   - B
   BT:
