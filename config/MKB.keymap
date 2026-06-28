@@ -78,7 +78,7 @@
         function_layer {
             label = "Fnc";
             bindings = <
-&to 4     &kp F7  &kp F8     &kp F9    &kp LG(SPACE)  &kp LG(LS(NUMBER_4))      &trans  &trans                &trans     &trans     &trans     &trans
+&to 4     &kp F7  &kp F8     &kp F9    &kp LG(SPACE)  &kp LG(LS(NUMBER_4))      &trans  &kp LC(LA(F))         &trans     &kp LC(LA(H))  &kp LC(LA(LS(UP_ARROW)))  &trans
 &trans    &kp F4  &kp F5     &kp F6    &kp LS(LG(V))  &trans                    &trans  &trans                &trans     &trans     &trans     &trans
 &kp F10   &kp F1  &kp F2     &kp F3    &caps_word     &trans                    &trans  &trans                &trans     &trans     &trans     &trans
 &trans    &trans  &trans               &trans         &trans                    &trans  &trans                           &trans     &trans     &trans
