@@ -185,10 +185,10 @@ layers:
   - Gui+SPACE
   - Gui+Sft+4
   - {t: ▽, type: trans}
+  - Ctl+Alt+F
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Ctl+Alt+H
+  - Meh+UP ARROW
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - F4
