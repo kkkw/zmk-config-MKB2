@@ -164,7 +164,7 @@ svg.physical-layout { font-family: ui-monospace, SFMono-Regular, Consolas, monos
 </g>
 <g class="key keypos-34 " transform="translate(810 168) rotate(0 -780 -104)">
 <rect x="0" y="0" width="52" height="52" rx="6" ry="6"/>
-<text class="tap" x="26" y="20">QMARK</text>
+<text class="tap" x="26" y="20">SLASH</text>
 <text class="hold" x="26" y="37">RALT</text>
 </g>
 <g class="key keypos-35 " transform="translate(862 168) rotate(0 -832 -104)">
@@ -196,7 +196,7 @@ svg.physical-layout { font-family: ui-monospace, SFMono-Regular, Consolas, monos
 </g>
 <g class="key keypos-41 " transform="translate(563 233) rotate(0 -533 -169)">
 <rect x="0" y="0" width="52" height="52" rx="6" ry="6"/>
-<text class="tap" x="26" y="20">SPC</text>
+<text class="tap" x="26" y="20">ENTER</text>
 <text class="hold" x="26" y="37">LT 2</text>
 </g>
 <g class="key keypos-42 " transform="translate(615 220) rotate(0 -585 -156)">
