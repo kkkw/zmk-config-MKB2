@@ -19,8 +19,10 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
             // &msc integrates speed over press duration; the default 5ms tap
             // yields 10*5/1000 = 0 => no HID report. 100ms gives exactly 1 tick.
+
             tap-ms = <100>;
         };
     };
@@ -33,8 +35,8 @@
             bindings = <
 &kp ESC    &kp Q     &kp W      &kp E     &kp R        &kp T            &kp Y        &kp U                &kp I      &kp O      &kp P           &kp BKSP
 &lt 5 TAB  &kp A     &kp S      &kp D     &kp F        &kp G            &kp H        &kp J                &kp K      &kp L      &kp COLON       &kp ENTER
-&kp LSHFT  &kp Z     &kp X      &kp C     &kp V        &kp B            &kp N        &kp M                &kp COMMA  &kp DOT    &mt RALT QMARK  &mt RIGHT_SHIFT MINUS
-&kp LCTRL  &kp LALT  &kp LGUI             &lt 3 LANG2  &lt 1 SPACE      &lt 2 SPACE  &mt RIGHT_GUI LANG1             &mkp MB1   &mkp MB2        &mkp MB3
+&kp LSHFT  &kp Z     &kp X      &kp C     &kp V        &kp B            &kp N        &kp M                &kp COMMA  &kp DOT    &mt RALT SLASH  &mt RIGHT_SHIFT MINUS
+&kp LCTRL  &kp LALT  &kp LGUI             &lt 3 LANG2  &lt 1 SPACE      &lt 2 ENTER  &mt RIGHT_GUI LANG1             &mkp MB1   &mkp MB2        &mkp MB3
 &kp LEFT   &kp UP    &kp ENTER  &kp DOWN  &kp RIGHT                                  &kp HOME             &kp PG_UP  &kp ENTER  &kp PG_DN       &kp END
                                 &kp A                                                                     &kp B
             >;
@@ -59,12 +61,12 @@
         num_layer {
             label = "Num";
             bindings = <
-&trans    &kp N7        &kp N8        &kp N9        &trans     &trans      &trans  &trans    &kp UP_ARROW  &trans     &trans     &trans
-&trans    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans     &trans      &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans     &trans
-&kp N0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &trans      &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &kp LG(N5) &trans
-&trans    &trans        &trans                      &trans     &trans      &trans  &trans                  &trans     &trans     &trans
-&kp LEFT  &kp UP        &kp SPACE     &kp DOWN      &kp RIGHT                      &kp HOME  &kp PG_UP     &kp ENTER  &kp PG_DN  &kp END
-                                      &kp A                                                  &kp B
+&trans    &kp N7        &kp N8        &kp N9        &trans     &trans      &trans      &trans      &kp UP_ARROW  &trans      &trans      &trans
+&trans    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans     &trans      &trans      &kp LEFT    &kp DOWN      &kp RIGHT   &trans      &trans
+&kp N0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &trans      &kp LG(N1)  &kp LG(N2)  &kp LG(N3)    &kp LG(N4)  &kp LG(N5)  &trans
+&trans    &trans        &trans                      &trans     &trans      &trans      &trans                    &trans      &trans      &trans
+&kp LEFT  &kp UP        &kp SPACE     &kp DOWN      &kp RIGHT                          &kp HOME    &kp PG_UP     &kp ENTER   &kp PG_DN   &kp END
+                                      &kp A                                                        &kp B
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -74,10 +76,10 @@
             label = "Fnc";
             bindings = <
 &to 4     &kp F7  &kp F8     &kp F9    &kp LG(SPACE)  &kp LG(LS(NUMBER_4))      &trans  &kp LC(LA(F))         &trans     &kp LC(LA(H))  &kp LC(LA(LS(UP_ARROW)))  &trans
-&trans    &kp F4  &kp F5     &kp F6    &kp LS(LG(V))  &trans                    &trans  &trans                &trans     &trans     &trans     &trans
-&kp F10   &kp F1  &kp F2     &kp F3    &caps_word     &trans                    &trans  &trans                &trans     &trans     &trans     &trans
-&trans    &trans  &trans               &trans         &trans                    &trans  &trans                           &trans     &trans     &trans
-&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                                        &kp LG(LEFT_BRACKET)  &kp LG(R)  &kp ENTER  &kp LG(W)  &kp LG(RIGHT_BRACKET)
+&trans    &kp F4  &kp F5     &kp F6    &kp LS(LG(V))  &trans                    &trans  &trans                &trans     &trans         &trans                    &trans
+&kp F10   &kp F1  &kp F2     &kp F3    &caps_word     &trans                    &trans  &trans                &trans     &trans         &trans                    &trans
+&trans    &trans  &trans               &trans         &trans                    &trans  &trans                           &trans         &trans                    &trans
+&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                                        &kp LG(LEFT_BRACKET)  &kp LG(R)  &kp ENTER      &kp LG(W)                 &kp LG(RIGHT_BRACKET)
                              &kp A                                                                            &kp B
             >;
 
