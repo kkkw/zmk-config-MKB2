@@ -2,12 +2,12 @@
   "repository": "kkkw/zmk-config-MKB2",
   "branch": "main",
   "target": "all",
-  "status": "passing",
-  "raw_status": "success",
-  "color": "#2ea44f",
-  "sha": "259e86bc566cfee962060b8d1e8e6f4ecf6522ce",
-  "run_id": "31429392280",
-  "run_number": "66",
-  "run_url": "https://github.com/kkkw/zmk-config-MKB2/actions/runs/31429392280",
-  "generated_at": "2026-08-10T20:42:55Z"
+  "status": "failing",
+  "raw_status": "failure",
+  "color": "#d73a49",
+  "sha": "30329420623f8fe9e9668cb6a1ca3c9cd9cf2502",
+  "run_id": "31533543923",
+  "run_number": "67",
+  "run_url": "https://github.com/kkkw/zmk-config-MKB2/actions/runs/31533543923",
+  "generated_at": "2026-08-11T20:44:42Z"
 }
