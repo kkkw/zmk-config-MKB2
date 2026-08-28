@@ -14,6 +14,7 @@
 ## 資料一覧
 
 - [2026-08-28-scroll-and-stability-research.md](2026-08-28-scroll-and-stability-research.md): 左エンコーダーのスクロールと Bluetooth 安定性に関する初期調査
+- [2026-08-29-encoder-scroll-candidate.md](2026-08-29-encoder-scroll-candidate.md): 通常解像度スクロール候補の設定、ビルド結果、実機試験項目
 - [2026-08-28-build-and-flash-loop.md](2026-08-28-build-and-flash-loop.md): 反復ビルドとmacOSからのUF2書き込みに関する調査
 
 運用上の規則と、次回以降の作業へ必ず適用する短い知見は、ルートの `AGENTS.md` に反映する。利用者が明示的に削除を依頼しない限り、このディレクトリの資料を上流同期時に削除しない。

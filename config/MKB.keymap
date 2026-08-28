@@ -25,12 +25,10 @@
         scroll_encoder: scroll_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            // &msc integrates speed over press duration; the default 5ms tap
-            // yields 10*5/1000 = 0 => no HID report. 100ms gives exactly 1 tick.
-
-            tap-ms = <100>;
+            bindings = <&msc MOVE_Y(64)>, <&msc MOVE_Y(-64)>;
+            // One 16ms &msc tick produces floor(64 * 16 / 1000) = 1 event.
+            // Release before the second tick to avoid delay and queue buildup.
+            tap-ms = <24>;
         };
     };
 
