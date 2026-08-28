@@ -6,7 +6,7 @@ on:
       target:
         description: "Regex matched against artifact-name, board, shield, and snippet. Use 'all' for every target."
         required: false
-        default: "all"
+        default: "^(MKB_L_MODULE_ENC|MKB_R_MODULE_TBv4)$"
       commit_firmware:
         description: "Commit built firmware files back to this branch."
         required: false
@@ -36,7 +36,7 @@ jobs:
       contents: write
       actions: read
     with:
-      target: ${{ inputs.target || 'all' }}
+      target: ${{ inputs.target || '^(MKB_L_MODULE_ENC|MKB_R_MODULE_TBv4)$' }}
       commit_firmware: ${{ github.event_name == 'push' || inputs.commit_firmware == true }}
       build_yaml: "build.yaml"
       firmware_folder: "firmware"
