@@ -16,7 +16,9 @@ permissions:
 
 jobs:
   build:
-    uses: te9no/zmk-workspace/.github/workflows/build-zmk-firmware.yml@main
+    # The provenance step added after 7e05681 expects .git inside the build
+    # container, but actions/checkout does not expose it in this reusable job.
+    uses: te9no/zmk-workspace/.github/workflows/build-zmk-firmware.yml@7e0568148904fe229d17f0c145e86d17a1b6d3b5
     permissions:
       contents: write
       actions: read
