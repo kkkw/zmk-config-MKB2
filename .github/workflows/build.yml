@@ -21,8 +21,9 @@ jobs:
       contents: write
       actions: read
     with:
-      target: "^(MKB_L_MODULE_ENC|MKB_R_MODULE_TBv4)$"
+      target: "MKB_L_MODULE_ENC|MKB_R_MODULE_TBv4"
       commit_firmware: true
+      fail_on_no_targets: true
       build_yaml: "build.yaml"
       firmware_folder: "firmware"
       max_parallel: 4
