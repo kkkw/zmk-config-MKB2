@@ -6,6 +6,5 @@
 };
 
 &sensors {
-   // Require more consistent quadrature movement before emitting scroll.
-   triggers-per-rotation = <4>;
+   triggers-per-rotation = <10>;
 };
