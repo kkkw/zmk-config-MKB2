@@ -32,31 +32,33 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        combo_qw_esc {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            layers = <DEF>;
+            bindings = <&kp ESC>;
+        };
+
+        combo_jk_lang1 {
+            timeout-ms = <50>;
+            key-positions = <19 20>;
+            layers = <DEF>;
+            bindings = <&kp LANG1>;
+        };
+
+        combo_df_lang2 {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            layers = <DEF>;
+            bindings = <&kp LANG2>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
-
-        combos {
-            combo_qw_esc {
-                timeout-ms = <50>;
-                key-positions = <1 2>;
-                layers = <DEF>;
-                bindings = <&kp ESC>;
-            };
-
-            combo_jk_lang1 {
-                timeout-ms = <50>;
-                key-positions = <19 20>;
-                layers = <DEF>;
-                bindings = <&kp LANG1>;
-            };
-
-            combo_df_lang2 {
-                timeout-ms = <50>;
-                key-positions = <15 16>;
-                layers = <DEF>;
-                bindings = <&kp LANG2>;
-            };
-        };
 
         default_layer {
             label = "Def";
