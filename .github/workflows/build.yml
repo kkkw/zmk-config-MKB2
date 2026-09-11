@@ -23,7 +23,7 @@ jobs:
       contents: write
       actions: read
     with:
-      target: "MKB_L_MODULE_ENC|MKB_R_MODULE_TBv4"
+      target: "MKB_L_MODULE_ENC|MKB_L_MODULE_JOY|MKB_R_MODULE_TBv4"
       commit_firmware: true
       fail_on_no_targets: true
       build_yaml: "build.yaml"
