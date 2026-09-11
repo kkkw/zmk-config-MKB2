@@ -35,6 +35,29 @@
     keymap {
         compatible = "zmk,keymap";
 
+        combos {
+            combo_qw_esc {
+                timeout-ms = <50>;
+                key-positions = <1 2>;
+                layers = <DEF>;
+                bindings = <&kp ESC>;
+            };
+
+            combo_jk_lang1 {
+                timeout-ms = <50>;
+                key-positions = <19 20>;
+                layers = <DEF>;
+                bindings = <&kp LANG1>;
+            };
+
+            combo_df_lang2 {
+                timeout-ms = <50>;
+                key-positions = <15 16>;
+                layers = <DEF>;
+                bindings = <&kp LANG2>;
+            };
+        };
+
         default_layer {
             label = "Def";
             bindings = <
@@ -52,11 +75,11 @@
         symbol_layer {
             label = "Sym";
             bindings = <
-&trans                 &kp AMPERSAND    &kp ASTRK    &kp LEFT_PARENTHESIS  &trans     &trans        &trans  &kp GRAVE  &kp TILDE  &kp LEFT_BRACKET   &kp LEFT_BRACE     &trans
-&trans                 &kp DLLR         &kp PERCENT  &kp CARET             &kp BSLH   &kp PIPE      &trans  &kp SEMI   &kp COLON  &kp RIGHT_BRACKET  &kp RIGHT_BRACE    &trans
-&kp RIGHT_PARENTHESIS  &kp EXCLAMATION  &kp AT       &kp HASH              &kp SLASH  &trans        &trans  &kp EQUAL  &kp PLUS   &kp SINGLE_QUOTE   &kp DOUBLE_QUOTES  &kp UNDER
-&trans                 &trans           &trans                             &trans     &trans        &trans  &trans                &trans             &trans             &trans
-&kp LEFT               &kp UP           &kp SPACE    &kp DOWN              &kp RIGHT                        &kp HOME   &kp PG_UP  &kp ENTER          &kp PG_DN          &kp END
+&trans  &trans                 &kp AMPERSAND    &kp ASTRK    &kp LEFT_PARENTHESIS  &kp PIPE     &trans  &kp GRAVE  &kp TILDE  &kp LEFT_BRACKET   &kp LEFT_BRACE     &trans
+&trans  &trans                 &kp DLLR         &kp PERCENT  &kp CARET             &kp BSLH     &trans  &kp SEMI   &kp COLON  &kp RIGHT_BRACKET  &kp RIGHT_BRACE    &trans
+&trans  &kp RIGHT_PARENTHESIS  &kp EXCLAMATION  &kp AT       &kp HASH              &kp SLASH    &trans  &kp EQUAL  &kp PLUS   &kp SINGLE_QUOTE   &kp DOUBLE_QUOTES  &kp UNDER
+&trans  &trans                 &trans           &trans       &trans                             &trans        &trans  &trans                &trans             &trans             &trans
+&trans  &kp LEFT               &kp UP           &kp SPACE    &kp DOWN              &kp RIGHT                          &kp HOME   &kp PG_UP  &kp ENTER          &kp PG_DN          &kp END
                                                      &kp A                                                             &kp B
             >;
 
@@ -66,11 +89,11 @@
         num_layer {
             label = "Num";
             bindings = <
-&trans    &kp N7        &kp N8        &kp N9        &trans     &trans      &trans      &trans      &kp UP_ARROW  &trans      &trans      &trans
-&trans    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans     &trans      &trans      &kp LEFT    &kp DOWN      &kp RIGHT   &trans      &trans
-&kp N0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &trans      &kp LG(N1)  &kp LG(N2)  &kp LG(N3)    &kp LG(N4)  &kp LG(N5)  &trans
-&trans    &trans        &trans                      &trans     &trans      &trans      &trans                    &trans      &trans      &trans
-&kp LEFT  &kp UP        &kp SPACE     &kp DOWN      &kp RIGHT                          &kp HOME    &kp PG_UP     &kp ENTER   &kp PG_DN   &kp END
+&trans  &trans    &kp N7        &kp N8        &kp N9        &trans     &trans      &trans      &kp UP_ARROW  &trans      &trans      &trans
+&trans  &trans    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans     &trans      &kp LEFT    &kp DOWN      &kp RIGHT   &trans      &trans
+&trans  &kp N0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &trans      &trans      &trans         &trans      &trans      &trans
+&trans  &trans    &trans        &trans                      &trans     &trans      &trans                    &trans      &trans      &trans
+&trans  &kp LEFT  &kp UP        &kp SPACE     &kp DOWN      &kp RIGHT                          &kp HOME    &kp PG_UP     &kp ENTER   &kp PG_DN   &kp END
                                       &kp A                                                        &kp B
             >;
 
@@ -80,11 +103,11 @@
         function_layer {
             label = "Fnc";
             bindings = <
-&to 4     &kp F7  &kp F8     &kp F9    &kp LG(SPACE)  &kp LG(LS(NUMBER_4))          &trans  &kp LC(LA(F))         &trans     &kp LC(LA(H))  &kp LC(LA(LS(UP_ARROW)))  &trans
-&trans    &kp F4  &kp F5     &kp F6    &kp LS(LG(V))  &kp LS(LC(LG(NUMBER_4)))      &trans  &trans                &trans     &trans         &trans                    &trans
-&kp F10   &kp F1  &kp F2     &kp F3    &caps_word     &trans                        &trans  &trans                &trans     &trans         &trans                    &trans
-&trans    &trans  &trans               &trans         &trans                        &trans  &trans                           &trans         &trans                    &trans
-&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                                            &kp LG(LEFT_BRACKET)  &kp LG(R)  &kp ENTER      &kp LG(W)                 &kp LG(RIGHT_BRACKET)
+&trans  &to 4     &kp F7  &kp F8     &kp F9    &kp LG(SPACE)            &kp LG(LS(NUMBER_4))  &kp LC(LA(F))         &trans     &kp LC(LA(H))  &kp LC(LA(LS(UP_ARROW)))  &trans
+&trans  &trans    &kp F4  &kp F5     &kp F6    &kp LS(LG(V))             &kp LS(LC(LG(NUMBER_4)))  &trans                &trans     &trans         &trans                    &trans
+&trans  &kp F10   &kp F1  &kp F2     &kp F3    &caps_word                &kp LG(N1)                 &kp LG(N2)              &kp LG(N3)  &kp LG(N4)     &kp LG(N5)                 &trans
+&trans  &trans    &trans  &trans               &trans                   &trans                    &trans                           &trans         &trans                    &trans
+&trans  &kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                                                    &kp LG(LEFT_BRACKET)  &kp LG(R)  &kp ENTER      &kp LG(W)                 &kp LG(RIGHT_BRACKET)
                              &kp A                                                                                &kp B
             >;
 
