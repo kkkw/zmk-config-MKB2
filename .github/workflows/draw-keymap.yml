@@ -1,6 +1,5 @@
 name: Draw ZMK keymaps
 on:
-  workflow_dispatch:
   push:
     paths:
       - "config/*.keymap"
@@ -17,7 +16,7 @@ jobs:
     permissions:
       contents: write
     with:
-      commit_message: "[Draw keymap-svg] ${{ github.event.head_commit.message || 'manual run' }}"
+      commit_message: "[Draw keymap-svg] ${{ github.event.head_commit.message || 'push run' }}"
       amend_commit: false
       keymap_patterns: "config/*.keymap"
       output_folder: "keymap-svg"
