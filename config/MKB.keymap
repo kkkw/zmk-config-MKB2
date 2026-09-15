@@ -114,7 +114,7 @@
             bindings = <
 &trans  &to 4     &kp F7  &kp F8     &kp F9    &kp LG(SPACE)            &kp LG(LS(NUMBER_4))  &kp LC(LA(F))         &trans     &kp LC(LA(H))  &kp LC(LA(LS(UP_ARROW)))  &trans
 &trans  &trans    &kp F4  &kp F5     &kp F6    &kp LS(LG(V))             &kp LS(LC(LG(NUMBER_4)))  &trans                &trans     &trans         &trans                    &trans
-&trans  &kp F10   &kp F1  &kp F2     &kp F3    &trans                       &kp LC(LS(X))              &kp LC(LS(SPACE))       &kp LC(LS(PG_UP))  &kp LC(LS(PG_DN))  &trans                     &trans
+&trans  &kp F10   &kp F1  &kp F2     &kp F3    &trans                       &kp LC(LS(X))              &kp LC(LS(SPACE))       &kp LC(LS(PG_UP))  &kp LC(LS(PG_DN))  &kp LG(LS(A))              &trans
 &trans  &trans    &trans  &trans               &trans                   &trans                    &trans                           &trans         &trans                    &trans
 &trans  &kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                                                    &kp LG(LEFT_BRACKET)  &kp LG(R)  &kp ENTER      &kp LG(W)                 &kp LG(RIGHT_BRACKET)
                              &kp A                                                                                &kp B
