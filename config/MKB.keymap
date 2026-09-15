@@ -49,6 +49,13 @@
             bindings = <&kp LANG1>;
         };
 
+        combo_as_caps_word {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            layers = <DEF>;
+            bindings = <&caps_word>;
+        };
+
         combo_df_lang2 {
             timeout-ms = <50>;
             key-positions = <15 16>;
@@ -93,7 +100,7 @@
             bindings = <
 &trans  &trans    &kp N7        &kp N8        &kp N9        &trans     &trans      &trans      &kp UP_ARROW  &trans      &trans      &trans
 &trans  &trans    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans     &trans      &kp LEFT    &kp DOWN      &kp RIGHT   &trans      &trans
-&trans  &kp N0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &trans      &trans      &trans         &trans      &trans      &trans
+&trans  &kp N0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &kp LG(N1)  &kp LG(N2)  &kp LG(N3)     &kp LG(N4)  &kp LG(N5)  &trans
 &trans  &trans    &trans        &trans                      &trans     &trans      &trans                    &trans      &trans      &trans
 &trans  &kp LEFT  &kp UP        &kp SPACE     &kp DOWN      &kp RIGHT                          &kp HOME    &kp PG_UP     &kp ENTER   &kp PG_DN   &kp END
                                       &kp A                                                        &kp B
@@ -107,7 +114,7 @@
             bindings = <
 &trans  &to 4     &kp F7  &kp F8     &kp F9    &kp LG(SPACE)            &kp LG(LS(NUMBER_4))  &kp LC(LA(F))         &trans     &kp LC(LA(H))  &kp LC(LA(LS(UP_ARROW)))  &trans
 &trans  &trans    &kp F4  &kp F5     &kp F6    &kp LS(LG(V))             &kp LS(LC(LG(NUMBER_4)))  &trans                &trans     &trans         &trans                    &trans
-&trans  &kp F10   &kp F1  &kp F2     &kp F3    &caps_word                &kp LG(N1)                 &kp LG(N2)              &kp LG(N3)  &kp LG(N4)     &kp LG(N5)                 &trans
+&trans  &kp F10   &kp F1  &kp F2     &kp F3    &trans                       &kp LC(LS(X))              &kp LC(LS(SPACE))       &kp LC(LS(PG_UP))  &kp LC(LS(PG_DN))  &trans                     &trans
 &trans  &trans    &trans  &trans               &trans                   &trans                    &trans                           &trans         &trans                    &trans
 &trans  &kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                                                    &kp LG(LEFT_BRACKET)  &kp LG(R)  &kp ENTER      &kp LG(W)                 &kp LG(RIGHT_BRACKET)
                              &kp A                                                                                &kp B
